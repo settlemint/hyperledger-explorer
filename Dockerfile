@@ -16,6 +16,9 @@ WORKDIR $EXPLORER_APP_PATH
 
 COPY . .
 
+# Fix CVE-2023-5363 vulnerability: https://github.com/alpinelinux/docker-alpine/issues/352
+RUN apk update && apk upgrade --no-cache libcrypto3 libssl3
+
 # install required dependencies by NPM packages:
 # current dependencies are: python, make, g++
 RUN apk add --no-cache --virtual npm-deps python3 make g++ curl bash && \
