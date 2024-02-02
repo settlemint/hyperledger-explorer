@@ -24,6 +24,7 @@ RUN apk update && apk upgrade --no-cache libcrypto3 libssl3
 RUN apk add --no-cache --virtual npm-deps python3 make g++ curl bash && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
+				rm /usr/lib/python3.11/EXTERNALLY-MANAGED \
     pip3 install --upgrade pip setuptools && \
     rm -r /root/.cache
 
