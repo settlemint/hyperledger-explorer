@@ -22,7 +22,7 @@ RUN apk update && apk upgrade --no-cache libcrypto3 libssl3
 # install required dependencies by NPM packages:
 # current dependencies are: python, make, g++
 RUN apk add --no-cache --virtual npm-deps python3 make g++ curl bash && \
-				rm /usr/lib/python3.11/EXTERNALLY-MANAGED \
+				rm /usr/lib/python3.11/EXTERNALLY-MANAGED && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --upgrade pip setuptools && \
