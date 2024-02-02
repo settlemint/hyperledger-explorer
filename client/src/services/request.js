@@ -8,39 +8,59 @@ import Auth from '../state/Auth';
 
 export const post = (uri, payload) =>
 	new Promise((resolve, reject) => {
-		agent
+		let request = agent
 			.post(uri)
 			.send(payload)
-			.set('Accept', 'application/json')
-			.set('Authorization', `bearer ${Auth.getToken()}`)
-			.end(withPromiseCallback(resolve, reject));
+			.set('Accept', 'application/json');
+
+		const token = Auth.getToken();
+		if (token != null) {
+			request = request.set('Authorization', `bearer ${token}`);
+		}
+
+		request.end(withPromiseCallback(resolve, reject));
 	});
 export const get = uri =>
 	new Promise((resolve, reject) => {
-		agent
+		let request = agent
 			.get(uri)
 			.set('Accept', 'application/json')
-			.set('Authorization', `bearer ${Auth.getToken()}`)
-			.set('Cache-Control', 'no-cache')
-			.end(withPromiseCallback(resolve, reject));
+			.set('Cache-Control', 'no-cache');
+
+		const token = Auth.getToken();
+		if (token != null) {
+			request = request.set('Authorization', `bearer ${token}`);
+		}
+
+		request.end(withPromiseCallback(resolve, reject));
 	});
 export const put = (uri, payload) =>
 	new Promise((resolve, reject) => {
-		agent
+		let request = agent
 			.put(uri)
 			.send(payload)
-			.set('Accept', 'application/json')
-			.set('Authorization', `bearer ${Auth.getToken()}`)
-			.end(withPromiseCallback(resolve, reject));
+			.set('Accept', 'application/json');
+
+		const token = Auth.getToken();
+		if (token != null) {
+			request = request.set('Authorization', `bearer ${token}`);
+		}
+
+		request.end(withPromiseCallback(resolve, reject));
 	});
 export const deleteRequest = (uri, payload) =>
 	new Promise((resolve, reject) => {
-		agent
+		let request = agent
 			.delete(uri)
 			.send(payload)
-			.set('Accept', 'application/json')
-			.set('Authorization', `bearer ${Auth.getToken()}`)
-			.end(withPromiseCallback(resolve, reject));
+			.set('Accept', 'application/json');
+
+		const token = Auth.getToken();
+		if (token != null) {
+			request = request.set('Authorization', `bearer ${token}`);
+		}
+
+		request.end(withPromiseCallback(resolve, reject));
 	});
 export const withPromiseCallback = (resolve, reject) => (error, response) => {
 	if (error) {
