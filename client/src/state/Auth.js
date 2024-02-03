@@ -33,6 +33,7 @@ export default class Auth {
 	 */
 
 	static getToken() {
-		return localStorage.getItem('token');
+		return null;
+		//return localStorage.getItem('token');
 	}
 }

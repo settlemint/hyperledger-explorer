@@ -2,25 +2,24 @@
  *    SPDX-License-Identifier: Apache-2.0
  */
 
-import Express from 'express';
 import bodyParser from 'body-parser';
-import swaggerUi from 'swagger-ui-express';
 import compression from 'compression';
-import passport from 'passport';
+import Express from 'express';
 import RateLimit from 'express-rate-limit';
-import { PlatformBuilder } from './platform/PlatformBuilder';
+import passport from 'passport';
+import swaggerUi from 'swagger-ui-express';
+import { explorerConst } from './common/ExplorerConst';
+import { ExplorerError } from './common/ExplorerError';
+import { explorerError } from './common/ExplorerMessage';
 import explorerconfig from './explorerconfig.json';
+import { localLoginStrategy } from './passport/local-login';
 import { PersistenceFactory } from './persistence/PersistenceFactory';
+import { PlatformBuilder } from './platform/PlatformBuilder';
+import { adminroutes } from './platform/fabric/rest/adminroutes';
 import { authroutes } from './rest/authroutes';
 import { dbroutes } from './rest/dbroutes';
 import { platformroutes } from './rest/platformroutes';
-import { adminroutes } from './platform/fabric/rest/adminroutes';
-import { explorerConst } from './common/ExplorerConst';
-import { explorerError } from './common/ExplorerMessage';
-import { authCheckMiddleware } from './middleware/auth-check';
 import swaggerDocument from './swagger.json';
-import { ExplorerError } from './common/ExplorerError';
-import { localLoginStrategy } from './passport/local-login';
 
 /**
  *
@@ -111,7 +110,7 @@ export class Explorer {
 			// Make sure that platform instance will be referred after its initialization
 			passport.use('local-login', localLoginStrategy(platform));
 
-			this.app.use('/api', authCheckMiddleware);
+			// this.app.use('/api', authCheckMiddleware);
 
 			const authrouter = Express.Router();
 
