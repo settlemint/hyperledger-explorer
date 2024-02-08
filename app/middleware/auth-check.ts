@@ -5,22 +5,30 @@
 import * as jwt from 'jsonwebtoken';
 import config from '../explorerconfig.json';
 import { Platform } from '../platform/fabric/Platform';
+import { helper } from '../common/helper';
+
+const logger = helper.getLogger('AuthCheck');
 
 /**
  *  The Auth Checker middleware function.
  */
 export const authCheckMiddleware = (platform: Platform) => (req, res, next) => {
-	const networkId = req.headers['X-Network-ID'];
-	if (
-		networkId &&
-		!platform
-			.getClient(networkId)
-			.instance.fabricGateway.fabricConfig.getEnableAuthentication()
-	) {
-		req.requestUserId = 'dummy-user';
-		req.network = networkId;
+	const networkId = req.headers['X-Network-Id'];
 
-		return next();
+	if (networkId) {
+		logger.info('X-Network-Id header found', networkId);
+		const authEnabled = platform
+			.getClient(networkId)
+			.instance.fabricGateway.fabricConfig.getEnableAuthentication();
+
+		if (!authEnabled) {
+			logger.info('Skip authentication');
+
+			req.requestUserId = 'dummy-user';
+			req.network = networkId;
+
+			return next();
+		}
 	}
 
 	if (!req.headers.authorization) {

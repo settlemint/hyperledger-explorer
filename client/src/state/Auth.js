@@ -6,7 +6,11 @@ export default class Auth {
 	 * @param {string} token
 	 */
 	static authenticateUser(token, networkId) {
-		localStorage.setItem('token', token);
+		if (token != null) {
+			localStorage.setItem('token', token);
+		} else {
+			localStorage.removeItem('token');
+		}
 		localStorage.setItem('networkId', networkId);
 	}
 

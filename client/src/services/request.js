@@ -19,7 +19,7 @@ export const post = (uri, payload) =>
 		}
 		const networkId = Auth.getNetworkId();
 		if (token != null) {
-			request = request.set('X-Network-ID', networkId);
+			request = request.set('X-Network-Id', networkId);
 		}
 
 		request.end(withPromiseCallback(resolve, reject));
@@ -37,7 +37,7 @@ export const get = (uri) =>
 		}
 		const networkId = Auth.getNetworkId();
 		if (token != null) {
-			request = request.set('X-Network-ID', networkId);
+			request = request.set('X-Network-Id', networkId);
 		}
 
 		request.end(withPromiseCallback(resolve, reject));
@@ -55,7 +55,7 @@ export const put = (uri, payload) =>
 		}
 		const networkId = Auth.getNetworkId();
 		if (token != null) {
-			request = request.set('X-Network-ID', networkId);
+			request = request.set('X-Network-Id', networkId);
 		}
 
 		request.end(withPromiseCallback(resolve, reject));
@@ -73,7 +73,7 @@ export const deleteRequest = (uri, payload) =>
 		}
 		const networkId = Auth.getNetworkId();
 		if (token != null) {
-			request = request.set('X-Network-ID', networkId);
+			request = request.set('X-Network-Id', networkId);
 		}
 
 		request.end(withPromiseCallback(resolve, reject));
