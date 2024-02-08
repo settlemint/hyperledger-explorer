@@ -17,10 +17,14 @@ export const post = (uri, payload) =>
 		if (token != null) {
 			request = request.set('Authorization', `bearer ${token}`);
 		}
+		const networkId = Auth.getNetworkId();
+		if (token != null) {
+			request = request.set('X-Network-ID', networkId);
+		}
 
 		request.end(withPromiseCallback(resolve, reject));
 	});
-export const get = uri =>
+export const get = (uri) =>
 	new Promise((resolve, reject) => {
 		let request = agent
 			.get(uri)
@@ -30,6 +34,10 @@ export const get = uri =>
 		const token = Auth.getToken();
 		if (token != null) {
 			request = request.set('Authorization', `bearer ${token}`);
+		}
+		const networkId = Auth.getNetworkId();
+		if (token != null) {
+			request = request.set('X-Network-ID', networkId);
 		}
 
 		request.end(withPromiseCallback(resolve, reject));
@@ -45,6 +53,10 @@ export const put = (uri, payload) =>
 		if (token != null) {
 			request = request.set('Authorization', `bearer ${token}`);
 		}
+		const networkId = Auth.getNetworkId();
+		if (token != null) {
+			request = request.set('X-Network-ID', networkId);
+		}
 
 		request.end(withPromiseCallback(resolve, reject));
 	});
@@ -58,6 +70,10 @@ export const deleteRequest = (uri, payload) =>
 		const token = Auth.getToken();
 		if (token != null) {
 			request = request.set('Authorization', `bearer ${token}`);
+		}
+		const networkId = Auth.getNetworkId();
+		if (token != null) {
+			request = request.set('X-Network-ID', networkId);
 		}
 
 		request.end(withPromiseCallback(resolve, reject));

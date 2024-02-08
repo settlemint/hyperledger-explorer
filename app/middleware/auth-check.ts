@@ -4,11 +4,25 @@
 
 import * as jwt from 'jsonwebtoken';
 import config from '../explorerconfig.json';
+import { Platform } from '../platform/fabric/Platform';
 
 /**
  *  The Auth Checker middleware function.
  */
-export const authCheckMiddleware = (req, res, next) => {
+export const authCheckMiddleware = (platform: Platform) => (req, res, next) => {
+	const networkId = req.headers['X-Network-ID'];
+	if (
+		networkId &&
+		!platform
+			.getClient(networkId)
+			.instance.fabricGateway.fabricConfig.getEnableAuthentication()
+	) {
+		req.requestUserId = 'dummy-user';
+		req.network = networkId;
+
+		return next();
+	}
+
 	if (!req.headers.authorization) {
 		return res.status(401).end();
 	}

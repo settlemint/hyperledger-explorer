@@ -5,8 +5,9 @@ export default class Auth {
 	 *
 	 * @param {string} token
 	 */
-	static authenticateUser(token) {
+	static authenticateUser(token, networkId) {
 		localStorage.setItem('token', token);
+		localStorage.setItem('networkId', networkId);
 	}
 
 	/**
@@ -15,7 +16,7 @@ export default class Auth {
 	 * @returns {boolean}
 	 */
 	static isUserAuthenticated() {
-		return localStorage.getItem('token') !== null;
+		return localStorage.getItem('networkId') !== null; // token can be null if auth is disabled
 	}
 
 	/**
@@ -24,6 +25,7 @@ export default class Auth {
 	 */
 	static deauthenticateUser() {
 		localStorage.removeItem('token');
+		localStorage.removeItem('networkId');
 	}
 
 	/**
@@ -33,7 +35,10 @@ export default class Auth {
 	 */
 
 	static getToken() {
-		return null;
-		//return localStorage.getItem('token');
+		return localStorage.getItem('token');
+	}
+
+	static getNetworkId() {
+		return localStorage.getItem('networkId');
 	}
 }

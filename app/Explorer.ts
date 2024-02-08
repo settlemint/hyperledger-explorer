@@ -20,6 +20,7 @@ import { authroutes } from './rest/authroutes';
 import { dbroutes } from './rest/dbroutes';
 import { platformroutes } from './rest/platformroutes';
 import swaggerDocument from './swagger.json';
+import { authCheckMiddleware } from './middleware/auth-check';
 
 /**
  *
@@ -57,7 +58,11 @@ export class Explorer {
 
 		this.app.use(passport.initialize());
 		if (process.env.NODE_ENV !== 'production') {
-			this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+			this.app.use(
+				'/api-docs',
+				swaggerUi.serve,
+				swaggerUi.setup(swaggerDocument)
+			);
 		}
 		this.app.use(compression());
 		this.persistence = null;
@@ -110,7 +115,7 @@ export class Explorer {
 			// Make sure that platform instance will be referred after its initialization
 			passport.use('local-login', localLoginStrategy(platform));
 
-			// this.app.use('/api', authCheckMiddleware);
+			this.app.use('/api', authCheckMiddleware(platform));
 
 			const authrouter = Express.Router();
 

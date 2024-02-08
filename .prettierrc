@@ -1,0 +1,40 @@
+{
+	"semi": true,
+	"singleQuote": true,
+	"trailingComma": "none",
+	"printWidth": 80,
+	"quoteProps": "as-needed",
+	"arrowParens": "always",
+	"tabWidth": 2,
+	"overrides": [
+			{
+					"files": "*.sol",
+					"options": {
+							"printWidth": 120,
+							"tabWidth": 2,
+							"useTabs": false,
+							"singleQuote": false,
+							"explicitTypes": "always"
+					}
+			},
+			{
+					"files": "*.json",
+					"options": {
+							"trailingComma": "none"
+					}
+			},
+			{
+					"files": "*.babelrc",
+					"options": {
+							"trailingComma": "none"
+					}
+			},
+			{
+					"files": "*.yaml",
+					"options": {
+							"singleQuote": false,
+							"tabWidth": 2
+					}
+			}
+	]
+}

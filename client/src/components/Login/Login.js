@@ -26,7 +26,7 @@ import { shape, string } from 'prop-types';
 
 import { authSelectors, authOperations } from '../../state/redux/auth';
 
-const styles = theme => ({
+const styles = (theme) => ({
 	container: {
 		width: 'auto',
 		display: 'block', // Fix IE 11 issue.
@@ -114,7 +114,7 @@ export class Login extends Component {
 		}));
 	}
 
-	handleChange = event => {
+	handleChange = (event) => {
 		const { target } = event;
 		const value = target.type === 'checkbox' ? target.checked : target.value;
 		const { name } = target;
@@ -125,9 +125,9 @@ export class Login extends Component {
 		if (name === 'network') {
 			const { networks } = this.state;
 			newState.authEnabled = (
-				networks.find(n => n.name === value) || {}
+				networks.find((n) => n.name === value) || {}
 			).authEnabled;
-			newState.network.id = (networks.find(n => n.name === value) || {}).id;
+			newState.network.id = (networks.find((n) => n.name === value) || {}).id;
 		}
 
 		this.setState(newState);
@@ -142,7 +142,8 @@ export class Login extends Component {
 				user: authEnabled ? user : 'dummy-user',
 				password: authEnabled ? password : 'dummy-password'
 			},
-			network
+			network,
+			authEnabled
 		);
 
 		this.setState(() => ({ info }));
@@ -153,7 +154,7 @@ export class Login extends Component {
 		}
 	}
 
-	submitForm = async e => {
+	submitForm = async (e) => {
 		e.preventDefault();
 
 		const { user, password, network } = this.state;
@@ -217,7 +218,7 @@ export class Login extends Component {
 								label="Network"
 								disabled={isLoading}
 								value={network.value}
-								onChange={e => this.handleChange(e)}
+								onChange={(e) => this.handleChange(e)}
 								margin="normal"
 								InputProps={{
 									startAdornment: (
@@ -228,7 +229,7 @@ export class Login extends Component {
 									shrink: 'true'
 								}}
 							>
-								{networks.map(item => (
+								{networks.map((item) => (
 									<MenuItem key={item.name} value={item.name}>
 										{item.name}
 									</MenuItem>
@@ -251,7 +252,7 @@ export class Login extends Component {
 									label="User"
 									disabled={isLoading}
 									value={user.value}
-									onChange={e => this.handleChange(e)}
+									onChange={(e) => this.handleChange(e)}
 									margin="normal"
 									InputProps={{
 										startAdornment: (
@@ -281,7 +282,7 @@ export class Login extends Component {
 									label="Password"
 									disabled={isLoading}
 									value={password.value}
-									onChange={e => this.handleChange(e)}
+									onChange={(e) => this.handleChange(e)}
 									margin="normal"
 									InputProps={{
 										startAdornment: (
@@ -305,7 +306,10 @@ export class Login extends Component {
 							</FormHelperText>
 						)}
 						{info && (
-							<FormHelperText id="component-error-text" className={classes.errortext}>
+							<FormHelperText
+								id="component-error-text"
+								className={classes.errortext}
+							>
 								{info.message}
 							</FormHelperText>
 						)}
@@ -327,7 +331,7 @@ export class Login extends Component {
 
 const { authSelector, errorSelector, networkSelector } = authSelectors;
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
 	return {
 		auth: authSelector(state),
 		error: errorSelector(state),
