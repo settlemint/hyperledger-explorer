@@ -35,9 +35,9 @@ const login = ({ user, password }, networkObj, authEnabled) => async (
 				return { status: 'Error', message: 'Invalid User, Password' };
 			});
 	} else {
-		Auth.authenticateUser(null, networkObj);
+		Auth.authenticateUser('dummy', networkObj);
 		dispatch(errorAction(null));
-		dispatch(loginAction({ user }));
+		dispatch(loginAction({ user, token: 'dummy' }));
 		return { status: 'Success' };
 	}
 };

@@ -14,11 +14,11 @@ export const post = (uri, payload) =>
 			.set('Accept', 'application/json');
 
 		const token = Auth.getToken();
-		if (token != null) {
+		if (token != null || token !== 'dummy') {
 			request = request.set('Authorization', `bearer ${token}`);
 		}
 		const networkId = Auth.getNetworkId();
-		if (token != null) {
+		if (networkId != null) {
 			request = request.set('X-Network-Id', networkId);
 		}
 
@@ -32,11 +32,11 @@ export const get = (uri) =>
 			.set('Cache-Control', 'no-cache');
 
 		const token = Auth.getToken();
-		if (token != null) {
+		if (token != null || token !== 'dummy') {
 			request = request.set('Authorization', `bearer ${token}`);
 		}
 		const networkId = Auth.getNetworkId();
-		if (token != null) {
+		if (networkId != null) {
 			request = request.set('X-Network-Id', networkId);
 		}
 
@@ -50,11 +50,11 @@ export const put = (uri, payload) =>
 			.set('Accept', 'application/json');
 
 		const token = Auth.getToken();
-		if (token != null) {
+		if (token != null || token !== 'dummy') {
 			request = request.set('Authorization', `bearer ${token}`);
 		}
 		const networkId = Auth.getNetworkId();
-		if (token != null) {
+		if (networkId != null) {
 			request = request.set('X-Network-Id', networkId);
 		}
 
@@ -68,11 +68,11 @@ export const deleteRequest = (uri, payload) =>
 			.set('Accept', 'application/json');
 
 		const token = Auth.getToken();
-		if (token != null) {
+		if (token != null || token !== 'dummy') {
 			request = request.set('Authorization', `bearer ${token}`);
 		}
 		const networkId = Auth.getNetworkId();
-		if (token != null) {
+		if (networkId != null) {
 			request = request.set('X-Network-Id', networkId);
 		}
 
