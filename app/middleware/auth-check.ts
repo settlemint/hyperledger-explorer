@@ -14,9 +14,11 @@ const logger = helper.getLogger('AuthCheck');
  */
 export const authCheckMiddleware = (platform: Platform) => (req, res, next) => {
 	const networkId = req.headers['X-Network-Id'];
+	logger.info('headers', JSON.stringify(Object.keys(req.headers)));
+
+	logger.info('X-Network-Id', networkId);
 
 	if (networkId) {
-		logger.info('X-Network-Id header found', networkId);
 		const authEnabled = platform
 			.getClient(networkId)
 			.instance.fabricGateway.fabricConfig.getEnableAuthentication();
