@@ -21,7 +21,7 @@ export const authCheckMiddleware = (platform: Platform) => (req, res, next) => {
 	if (networkId) {
 		const authEnabled = platform
 			.getClient(networkId)
-			.instance.fabricGateway.fabricConfig.getEnableAuthentication();
+			.fabricGateway.fabricConfig.getEnableAuthentication();
 
 		if (!authEnabled) {
 			logger.info('Skip authentication');
