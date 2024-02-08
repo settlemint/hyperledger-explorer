@@ -17,7 +17,9 @@ import actions from '../charts/actions';
 
 import Auth from '../../Auth';
 
-const login = ({ user, password }, networkObj, authEnabled) => (dispatch) => {
+const login = ({ user, password }, networkObj, authEnabled) => async (
+	dispatch
+) => {
 	if (authEnabled) {
 		return post('auth/login', { user, password, network: networkObj })
 			.then((resp) => {
