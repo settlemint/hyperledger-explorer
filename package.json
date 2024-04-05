@@ -22,7 +22,7 @@
 		"eslint": "^7.26.0",
 		"express": "^4.15.3",
 		"express-rate-limit": "^5.0.0",
-		"fabric-ca-client": "^2.2.11",
+		"fabric-sdk-node": "github:settlemint/fabric-sdk-node#9173f268a1a8cf5f577025ef0f4d175a52cbda14",
 		"fabric-network": "^2.2.11",
 		"fast-stats": "0.0.3",
 		"fs-extra": "^6.0.1",
