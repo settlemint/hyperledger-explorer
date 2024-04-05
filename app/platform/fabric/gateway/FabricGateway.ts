@@ -129,7 +129,7 @@
 				 },
 				 clientTlsIdentity: ''
 			 };
-			 logger.info('4', connectionOptions);
+			 logger.info('4', JSON.stringify(connectionOptions, null, 2));
  
 			 const mTlsIdLabel = this.fabricConfig.getClientTlsIdentity();
 			 if (mTlsIdLabel) {
@@ -143,7 +143,7 @@
 					 );
 				 }
 			 }
-			 logger.info('5', this.config);
+			 logger.info('5', JSON.stringify(this.config, null, 2));
  
 			 // Connect to gateway
 			 await this.gateway.connect(this.config, connectionOptions);
