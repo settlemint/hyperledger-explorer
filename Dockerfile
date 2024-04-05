@@ -33,6 +33,9 @@ RUN curl -sf https://gobinaries.com/tj/node-prune | sh
 # install NPM dependencies
 RUN npm install && npm run build && npm prune --production
 
+# Manually install dependancies for fabric-sdk-node
+# RUN cd node_modules/fabric-sdk-node && npm install
+
 # build explorer app
 RUN cd client && npm install && npm prune --production && yarn build
 
@@ -44,7 +47,7 @@ RUN rm -rf node_modules/rxjs/src/
 RUN rm -rf node_modules/rxjs/bundles/
 RUN rm -rf node_modules/rxjs/_esm5/
 RUN rm -rf node_modules/rxjs/_esm2015/
-RUN rm -rf node_modules/grpc/deps/grpc/third_party/
+# RUN rm -rf node_modules/grpc/deps/grpc/third_party/
 
 FROM node:18-alpine
 
