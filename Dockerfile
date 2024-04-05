@@ -47,7 +47,7 @@ RUN rm -rf node_modules/rxjs/src/
 RUN rm -rf node_modules/rxjs/bundles/
 RUN rm -rf node_modules/rxjs/_esm5/
 RUN rm -rf node_modules/rxjs/_esm2015/
-# RUN rm -rf node_modules/grpc/deps/grpc/third_party/
+RUN rm -rf node_modules/grpc/deps/grpc/third_party/
 
 FROM node:18-alpine
 
