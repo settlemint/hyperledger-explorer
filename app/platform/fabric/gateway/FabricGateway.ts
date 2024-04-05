@@ -3,8 +3,8 @@
  */
 
  import { X509Identity, Wallets, Gateway } from 'fabric-network';
- import * as fabprotos from 'fabric-sdk-node/fabric-protos';
- import { Discoverer, DiscoveryService } from 'fabric-sdk-node/fabric-common';
+ import * as fabprotos from 'fabric-protos';
+ import { Discoverer, DiscoveryService } from 'fabric-common';
  import concat from 'lodash/concat';
  import * as path from 'path';
  import { helper } from '../../../common/helper';
@@ -12,7 +12,7 @@
  import { ExplorerError } from '../../../common/ExplorerError';
  
  /* eslint-disable @typescript-eslint/no-var-requires */
- const { BlockDecoder, Client } = require('fabric-sdk-node/fabric-common');
+ const { BlockDecoder, Client } = require('fabric-common');
  const FabricCAServices = require('fabric-sdk-node/fabric-ca-client');
  /* eslint-enable @typescript-eslint/no-var-requires */
  

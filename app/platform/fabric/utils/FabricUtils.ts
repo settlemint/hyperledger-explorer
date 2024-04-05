@@ -6,7 +6,7 @@ import * as path from 'path';
 import fs from 'fs-extra';
 import sha from 'js-sha256';
 import asn from 'asn1.js';
-import { Utils } from 'fabric-sdk-node/fabric-common';
+import { Utils } from 'fabric-common';
 import { FabricClient } from '../FabricClient';
 import { ExplorerError } from '../../../common/ExplorerError';
 import { explorerError } from '../../../common/ExplorerMessage';
