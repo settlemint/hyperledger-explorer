@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import fabprotos from 'fabric-protos';
+import fabprotos from 'fabric-sdk-node/fabric-protos';
 import includes from 'lodash/includes';
 import * as sha from 'js-sha256';
 import { helper } from '../../../common/helper';

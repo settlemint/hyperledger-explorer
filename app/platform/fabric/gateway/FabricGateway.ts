@@ -3,8 +3,8 @@
  */
 
  import { X509Identity, Wallets, Gateway } from 'fabric-network';
- import * as fabprotos from 'fabric-protos';
- import { Discoverer, DiscoveryService } from 'fabric-common';
+ import * as fabprotos from 'fabric-sdk-node/fabric-protos';
+ import { Discoverer, DiscoveryService } from 'fabric-sdk-node/fabric-common';
  import concat from 'lodash/concat';
  import * as path from 'path';
  import { helper } from '../../../common/helper';
@@ -12,8 +12,8 @@
  import { ExplorerError } from '../../../common/ExplorerError';
  
  /* eslint-disable @typescript-eslint/no-var-requires */
- const { BlockDecoder, Client } = require('fabric-common');
- const FabricCAServices = require('fabric-ca-client');
+ const { BlockDecoder, Client } = require('fabric-sdk-node/fabric-common');
+ const FabricCAServices = require('fabric-sdk-node/fabric-ca-client');
  /* eslint-enable @typescript-eslint/no-var-requires */
  
  const logger = helper.getLogger('FabricGateway');
@@ -206,13 +206,17 @@
 		 try {
 			 const caName = this.config.organizations[this.fabricConfig.getOrganization()]
 				 .certificateAuthorities[0];
-			 const ca = new FabricCAServices(
-				 this.config.certificateAuthorities[caName].url,
-				 {
-					 trustedRoots: this.fabricConfig.getTlsCACertsPem(caName),
-					 verify: false
-				 }
-			 );
+					const ca = new FabricCAServices(
+						{
+							url: this.config.certificateAuthorities[caName].url,
+							tlsOptions: {
+								trustedRoots: this.fabricConfig.getTlsCACertsPem(caName),
+								verify: false
+							},
+							caName: caName,
+							customHeaders: this.config.certificateAuthorities[caName].customHeaders
+					}
+					);
  
 			 const enrollment = await ca.enroll({
 				 enrollmentID: this.fabricConfig.getCaAdminUser(),
