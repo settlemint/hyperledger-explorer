@@ -13,6 +13,8 @@ const logger = helper.getLogger('AuthCheck');
  *  The Auth Checker middleware function.
  */
 export const authCheckMiddleware = (platform: Platform) => (req, res, next) => {
+	logger.debug('authCheckMiddleware x-network-id', req.headers['x-network-id']);
+	logger.debug('authCheckMiddleware X-Network-Id', req.headers['X-Network-Id']);
 	const networkId = req.headers['x-network-id'];
 	logger.info('X-Network-Id', networkId);
 
