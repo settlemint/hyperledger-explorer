@@ -13,7 +13,7 @@
  
  /* eslint-disable @typescript-eslint/no-var-requires */
  const { BlockDecoder, Client } = require('fabric-common');
- const FabricCAServices = require('fabric-sdk-node/fabric-ca-client');
+ const FabricCAServices = require('fabric-ca-client');
  /* eslint-enable @typescript-eslint/no-var-requires */
  
  const logger = helper.getLogger('FabricGateway');
@@ -129,7 +129,7 @@
 				 },
 				 clientTlsIdentity: ''
 			 };
-			 logger.info('4', JSON.stringify(connectionOptions, null, 2));
+			 logger.info('4', connectionOptions);
  
 			 const mTlsIdLabel = this.fabricConfig.getClientTlsIdentity();
 			 if (mTlsIdLabel) {
@@ -143,7 +143,7 @@
 					 );
 				 }
 			 }
-			 logger.info('5', JSON.stringify(this.config, null, 2));
+			 logger.info('5', this.config);
  
 			 // Connect to gateway
 			 await this.gateway.connect(this.config, connectionOptions);
@@ -206,17 +206,13 @@
 		 try {
 			 const caName = this.config.organizations[this.fabricConfig.getOrganization()]
 				 .certificateAuthorities[0];
-					const ca = new FabricCAServices(
-						{
-							url: this.config.certificateAuthorities[caName].url,
-							tlsOptions: {
-								trustedRoots: this.fabricConfig.getTlsCACertsPem(caName),
-								verify: false
-							},
-							caName: caName,
-							customHeaders: this.config.certificateAuthorities[caName].customHeaders
-					}
-					);
+			 const ca = new FabricCAServices(
+				 this.config.certificateAuthorities[caName].url,
+				 {
+					 trustedRoots: this.fabricConfig.getTlsCACertsPem(caName),
+					 verify: false
+				 }
+			 );
  
 			 const enrollment = await ca.enroll({
 				 enrollmentID: this.fabricConfig.getCaAdminUser(),

@@ -33,9 +33,6 @@ RUN curl -sf https://gobinaries.com/tj/node-prune | sh
 # install NPM dependencies
 RUN npm install && npm run build && npm prune --production
 
-# Manually install dependancies for fabric-sdk-node
-# RUN cd node_modules/fabric-sdk-node && npm install
-
 # build explorer app
 RUN cd client && npm install && npm prune --production && yarn build
 
