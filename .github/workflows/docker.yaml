@@ -10,7 +10,7 @@ env:
 jobs:
   docker:
     name: docker
-    runs-on: X64
+    runs-on: namespace-profile-hyperledger-explorer
     steps:
       - name: Checkout
         uses: actions/checkout@v2
