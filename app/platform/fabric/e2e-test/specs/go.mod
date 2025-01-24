@@ -14,7 +14,7 @@ require (
 )
 
 require (
-	cloud.google.com/go v0.38.0 // indirect
+	cloud.google.com/go v0.110.0 // indirect
 	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78 // indirect
 	github.com/Azure/go-autorest/autorest v0.9.0 // indirect
 	github.com/Azure/go-autorest/autorest/adal v0.5.0 // indirect
@@ -77,8 +77,8 @@ require (
 	github.com/gobwas/ws v1.2.1 // indirect
 	github.com/godbus/dbus v0.0.0-20190422162347-ade71ed3457e // indirect
 	github.com/gogo/protobuf v1.2.2-0.20190723190241-65acae22fc9d // indirect
-	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b // indirect
-	github.com/golang/groupcache v0.0.0-20160516000752-02826c3e7903 // indirect
+	github.com/golang/glog v1.1.0 // indirect
+	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
 	github.com/golang/mock v1.2.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/btree v1.0.0 // indirect
@@ -86,8 +86,8 @@ require (
 	github.com/google/gofuzz v1.0.0 // indirect
 	github.com/google/martian v2.1.0+incompatible // indirect
 	github.com/google/pprof v0.0.0-20241210010833-40e02aabc2ad // indirect
-	github.com/google/uuid v1.1.1 // indirect
-	github.com/googleapis/gax-go/v2 v2.0.4 // indirect
+	github.com/google/uuid v1.3.0 // indirect
+	github.com/googleapis/gax-go/v2 v2.7.0 // indirect
 	github.com/googleapis/gnostic v0.0.0-20170729233727-0c5108395e2d // indirect
 	github.com/gophercloud/gophercloud v0.1.0 // indirect
 	github.com/gorilla/mux v1.7.4 // indirect
@@ -155,7 +155,7 @@ require (
 	github.com/xeipuuv/gojsonschema v0.0.0-20180618132009-1d523034197f // indirect
 	github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77 // indirect
 	github.com/yuin/goldmark v1.4.13 // indirect
-	go.opencensus.io v0.22.0 // indirect
+	go.opencensus.io v0.24.0 // indirect
 	go.starlark.net v0.0.0-20200203144150-6677ee5c7211 // indirect
 	golang.org/x/arch v0.0.0-20191126211547-368ea8f32fff // indirect
 	golang.org/x/crypto v0.31.0 // indirect
@@ -163,7 +163,7 @@ require (
 	golang.org/x/lint v0.0.0-20190313153728-d0100b6bd8b3 // indirect
 	golang.org/x/mod v0.22.0 // indirect
 	golang.org/x/net v0.33.0 // indirect
-	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45 // indirect
+	golang.org/x/oauth2 v0.7.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
 	golang.org/x/telemetry v0.0.0-20240521205824-bda55230c457 // indirect
@@ -171,11 +171,11 @@ require (
 	golang.org/x/text v0.21.0 // indirect
 	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4 // indirect
 	golang.org/x/tools v0.28.0 // indirect
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
-	google.golang.org/api v0.4.0 // indirect
-	google.golang.org/appengine v1.5.0 // indirect
-	google.golang.org/genproto v0.0.0-20190425155659-357c62f0e4bb // indirect
-	google.golang.org/grpc v1.22.0 // indirect
+	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
+	google.golang.org/api v0.110.0 // indirect
+	google.golang.org/appengine v1.6.7 // indirect
+	google.golang.org/genproto v0.0.0-20230410155749-daa745c078e1 // indirect
+	google.golang.org/grpc v1.56.3 // indirect
 	google.golang.org/protobuf v1.36.1 // indirect
 	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
