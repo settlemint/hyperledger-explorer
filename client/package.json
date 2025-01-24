@@ -94,7 +94,7 @@
 		"@wdio/mocha-framework": "^8.15.10",
 		"@wdio/selenium-standalone-service": "^8.15.0",
 		"@wdio/sync": "^7.32.4",
-		"cross-env": "^5.2.0",
+		"cross-env": "^7.0.0",
 		"enzyme": "^3.3.0",
 		"enzyme-adapter-react-16": "^1.1.1",
 		"jsdom": "^22.1.0",
