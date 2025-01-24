@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-FROM node:18-alpine AS BUILD_IMAGE
+FROM node:22.13.1-alpine AS BUILD_IMAGE
 
 # default values pf environment variables
 # that are used inside container
@@ -46,7 +46,7 @@ RUN rm -rf node_modules/rxjs/_esm5/
 RUN rm -rf node_modules/rxjs/_esm2015/
 RUN rm -rf node_modules/grpc/deps/grpc/third_party/
 
-FROM node:18-alpine
+FROM node:22.13.1-alpine
 
 # database configuration
 ENV DATABASE_HOST 127.0.0.1
