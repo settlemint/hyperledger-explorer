@@ -24,7 +24,7 @@
 		"express-rate-limit": "^5.0.0",
 		"fabric-ca-client": "^2.2.18",
 		"fabric-network": "^2.2.11",
-		"fast-stats": "0.0.3",
+		"fast-stats": "0.0.7",
 		"fs-extra": "^6.0.1",
 		"grpc": "^1.24.11",
 		"helmet": "^3.21.1",
