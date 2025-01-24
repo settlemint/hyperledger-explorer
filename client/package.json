@@ -32,7 +32,7 @@
 		"react": "^16.14.0",
 		"react-copy-to-clipboard": "^5.0.1",
 		"react-d3-graph": "^1.0.1",
-		"react-datepicker": "^1.6.0",
+		"react-datepicker": "^7.0.0",
 		"react-dom": "^16.14.0",
 		"react-event-timeline": "^1.5.4",
 		"react-fontawesome": "^1.6.1",
