@@ -60,7 +60,7 @@ require (
 	github.com/docker/spdystream v0.0.0-20160310174837-449fdfce4d96 // indirect
 	github.com/elazarl/goproxy v0.0.0-20170405201442-c4fc26588b6e // indirect
 	github.com/emicklei/go-restful v0.0.0-20170410110728-ff4f55a20633 // indirect
-	github.com/evanphx/json-patch v4.2.0+incompatible // indirect
+	github.com/evanphx/json-patch v4.9.0+incompatible // indirect
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/fsouza/go-dockerclient v1.6.3 // indirect
 	github.com/ghodss/yaml v0.0.0-20150909031657-73d445a93680 // indirect
@@ -81,7 +81,7 @@ require (
 	github.com/golang/groupcache v0.0.0-20160516000752-02826c3e7903 // indirect
 	github.com/golang/mock v1.2.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
-	github.com/google/btree v0.0.0-20180813153112-4030bb1f1f0c // indirect
+	github.com/google/btree v1.0.0 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/gofuzz v1.0.0 // indirect
 	github.com/google/martian v2.1.0+incompatible // indirect
@@ -101,7 +101,7 @@ require (
 	github.com/imdario/mergo v0.3.5 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
-	github.com/json-iterator/go v1.1.7 // indirect
+	github.com/json-iterator/go v1.1.8 // indirect
 	github.com/jstemmer/go-junit-report v0.0.0-20190106144839-af01ea7f8024 // indirect
 	github.com/kisielk/errcheck v1.2.0 // indirect
 	github.com/kisielk/gotool v1.0.0 // indirect
@@ -187,14 +187,14 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gotest.tools v2.2.0+incompatible // indirect
 	honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc // indirect
-	k8s.io/api v0.16.8 // indirect
-	k8s.io/apimachinery v0.16.8 // indirect
-	k8s.io/client-go v0.16.8 // indirect
+	k8s.io/api v0.17.16 // indirect
+	k8s.io/apimachinery v0.17.16 // indirect
+	k8s.io/client-go v0.17.16 // indirect
 	k8s.io/gengo v0.0.0-20190128074634-0689ccc1d7d6 // indirect
 	k8s.io/klog v1.0.0 // indirect
-	k8s.io/kube-openapi v0.0.0-20190816220812-743ec37842bf // indirect
+	k8s.io/kube-openapi v0.0.0-20200410145947-bcb3869e6f29 // indirect
 	k8s.io/kubernetes v1.13.0 // indirect
-	k8s.io/utils v0.0.0-20190801114015-581e00157fb1 // indirect
+	k8s.io/utils v0.0.0-20191114184206-e782cd3c129f // indirect
 	rsc.io/pdf v0.1.1 // indirect
 	sigs.k8s.io/structured-merge-diff v0.0.0-20190525122527-15d366b2352e // indirect
 	sigs.k8s.io/yaml v1.1.0 // indirect
