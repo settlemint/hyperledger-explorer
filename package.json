@@ -79,7 +79,7 @@
 		"chai": "^4.2.0",
 		"chai-as-promised": "^7.1.1",
 		"cross-env": "^7.0.0",
-		"eslint-config-airbnb": "^17.0.0",
+		"eslint-config-airbnb": "^19.0.0",
 		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-jsx-a11y": "^6.1.0",
 		"eslint-plugin-no-loops": "^0.3.0",
