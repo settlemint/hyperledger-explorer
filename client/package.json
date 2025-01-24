@@ -96,7 +96,7 @@
 		"@wdio/sync": "^7.32.4",
 		"cross-env": "^7.0.0",
 		"enzyme": "^3.3.0",
-		"enzyme-adapter-react-16": "^1.1.1",
+		"enzyme-adapter-react-16": "^1.15.7",
 		"jsdom": "^22.1.0",
 		"mock-local-storage": "^1.0.5",
 		"react-addons-test-utils": "^15.6.2",
