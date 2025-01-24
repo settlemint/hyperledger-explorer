@@ -29,7 +29,6 @@ RUN npm install && npm run build && npm prune --production
 RUN cd client && npm install && npm prune --production && yarn build
 
 # remove installed packages to free space
-RUN apk del npm-deps
 RUN /usr/local/bin/node-prune
 
 RUN rm -rf node_modules/rxjs/src/
