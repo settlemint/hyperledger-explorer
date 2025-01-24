@@ -14,7 +14,7 @@
 		"ajv": "^6.12.6",
 		"aphrodite": "^1.2.5",
 		"bootstrap": "^4.6.2",
-		"chart.js": "^2.9.4",
+		"chart.js": "^4.0.0",
 		"classnames": "^2.5.1",
 		"css-tree": "^2.3.1",
 		"font-awesome": "^4.7.0",
