@@ -11,7 +11,7 @@ MarkupSafe==0.23
 Pygments==2.15.0
 pytz==2016.4
 six==1.17.0
-snowballstemmer==1.9.1
+snowballstemmer==2.2.0
 Sphinx==1.8.6
 sphinx-rtd-theme==0.2.5b2
 recommonmark==0.4.0
