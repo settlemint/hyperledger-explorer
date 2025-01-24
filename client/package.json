@@ -57,7 +57,7 @@
 		"redux-thunk": "^2.2.0",
 		"slick-carousel": "^1.8.1",
 		"@svgr/webpack": "8.1.0",
-		"superagent": "^5.0.5",
+		"superagent": "^10.0.0",
 		"typeface-roboto": "1.1.13",
 		"util": "^0.12.5"
 	},
