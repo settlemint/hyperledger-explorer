@@ -18,7 +18,7 @@ COPY . .
 
 # install required dependencies by NPM packages:
 # current dependencies are: python, make, g++
-RUN apk add --no-cache --virtual npm-deps python3 make g++ curl bash
+RUN apk add --no-cache --virtual npm-deps python make g++ curl bash
 
 # install node-prune (https://github.com/tj/node-prune)
 RUN curl -sf https://gobinaries.com/tj/node-prune | sh
