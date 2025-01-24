@@ -45,7 +45,7 @@
 		"react-scripts": "^5.0.1",
 		"react-select": "^1.2.1",
 		"react-slick": "^0.30.0",
-		"react-swipeable-views": "^0.13.9",
+		"react-swipeable-views": "^0.14.0",
 		"react-table": "6.8.6",
 		"react-timeago": "^4.1.9",
 		"react-tree-graph": "^3.1.0",
