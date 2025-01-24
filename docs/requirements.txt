@@ -15,4 +15,4 @@ snowballstemmer==1.9.1
 Sphinx==1.8.6
 sphinx-rtd-theme==0.2.5b2
 recommonmark==0.4.0
-sphinxcontrib-contentui==0.2.2
+sphinxcontrib-contentui==0.2.5
