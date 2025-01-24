@@ -18,12 +18,7 @@ COPY . .
 
 # install required dependencies by NPM packages:
 # current dependencies are: python, make, g++
-RUN apk add --no-cache --virtual npm-deps python3 make g++ curl bash && \
-				rm -rf /usr/lib/python3.11/EXTERNALLY-MANAGED && \
-    python3 -m ensurepip && \
-    rm -r /usr/lib/python*/ensurepip && \
-    pip3 install --upgrade pip setuptools && \
-    rm -r /root/.cache
+RUN apk add --no-cache --virtual npm-deps python3 make g++ curl bash
 
 # install node-prune (https://github.com/tj/node-prune)
 RUN curl -sf https://gobinaries.com/tj/node-prune | sh
