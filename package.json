@@ -19,7 +19,7 @@
 		"compression": "^1.7.4",
 		"ejs": "^3.1.9",
 		"enum": "^2.5.0",
-		"eslint": "^7.26.0",
+		"eslint": "^9.0.0",
 		"express": "^4.20.0",
 		"express-rate-limit": "^5.0.0",
 		"fabric-ca-client": "^2.2.18",
@@ -52,7 +52,7 @@
 		"yn": "^4.0.0"
 	},
 	"overrides": {
-		"eslint": "^7.26.0"
+		"eslint": "^9.0.0"
 	},
 	"license": "Apache-2.0",
 	"devDependencies": {
