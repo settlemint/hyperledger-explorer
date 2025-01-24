@@ -37,7 +37,7 @@
 		"passport": "^0.6.0",
 		"passport-local": "^1.0.0",
 		"pg": "^8.11.3",
-		"pg-pool": "^3.6.1",
+		"pg-pool": "^3.7.0",
 		"prettyjson": "^1.2.1",
 		"prop-types": "^15.6.2",
 		"query-string": "^6.9.0",
