@@ -9,7 +9,7 @@ toolchain go1.23.5
 require (
 	github.com/go-resty/resty/v2 v2.1.0
 	github.com/hyperledger/fabric-test v1.4.5-0.20200212013951-45799a2ee4ee
-	github.com/onsi/ginkgo v1.16.4
+	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.36.2
 )
 
