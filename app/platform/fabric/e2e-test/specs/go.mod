@@ -9,7 +9,8 @@ toolchain go1.23.5
 require (
 	github.com/go-resty/resty/v2 v2.1.0
 	github.com/hyperledger/fabric-test v1.4.5-0.20200212013951-45799a2ee4ee
-	github.com/onsi/ginkgo v1.16.5
+	github.com/onsi/ginkgo v1.14.0
+	github.com/onsi/ginkgo/v2 v2.22.2
 	github.com/onsi/gomega v1.36.2
 )
 
@@ -123,7 +124,6 @@ require (
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f // indirect
 	github.com/nxadm/tail v1.4.8 // indirect
-	github.com/onsi/ginkgo/v2 v2.22.1 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.1.0-rc2.0.20221005185240-3a7f492d3f1b // indirect
 	github.com/opencontainers/runc v1.1.14 // indirect
