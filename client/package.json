@@ -37,7 +37,7 @@
 		"react-event-timeline": "^1.5.4",
 		"react-fontawesome": "^1.6.1",
 		"react-json-tree": "^0.19.0",
-		"react-loader-spinner": "^2.1.0",
+		"react-loader-spinner": "^6.0.0",
 		"react-redux": "^4.4.8",
 		"react-refetch": "^1.0.4",
 		"react-router": "^4.2.0",
