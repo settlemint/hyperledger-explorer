@@ -52,7 +52,7 @@
 		"react-websocket": "^2.0.0",
 		"reactstrap": "^9.0.0",
 		"recharts": "^2.9.0",
-		"redux": "^3.7.2",
+		"redux": "^5.0.0",
 		"redux-actions": "^0.13.0",
 		"redux-thunk": "^2.2.0",
 		"slick-carousel": "^1.8.1",
@@ -66,7 +66,7 @@
 		"jest-enzyme": "^7.1.2",
 		"react": "^16.14.0",
 		"react-dom": "^16.14.0",
-		"redux": "^3.7.2",
+		"redux": "^5.0.0",
 		"react-scripts": {
 			"@svgr/webpack": "8.1.0"
 		}
