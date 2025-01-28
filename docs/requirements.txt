@@ -13,6 +13,6 @@ pytz==2016.10
 six==1.17.0
 snowballstemmer==1.9.1
 Sphinx==1.8.6
-sphinx-rtd-theme==0.2.5b2
+sphinx-rtd-theme==0.5.2
 recommonmark==0.7.1
 sphinxcontrib-contentui==0.2.5
