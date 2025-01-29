@@ -7,7 +7,7 @@ go 1.22.0
 toolchain go1.23.5
 
 require (
-	github.com/go-resty/resty/v2 v2.1.0
+	github.com/go-resty/resty/v2 v2.16.5
 	github.com/hyperledger/fabric-test v1.4.5-0.20200212013951-45799a2ee4ee
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.36.2
@@ -169,7 +169,7 @@ require (
 	golang.org/x/telemetry v0.0.0-20240521205824-bda55230c457 // indirect
 	golang.org/x/term v0.27.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
-	golang.org/x/time v0.3.0 // indirect
+	golang.org/x/time v0.6.0 // indirect
 	golang.org/x/tools v0.28.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	google.golang.org/api v0.126.0 // indirect
