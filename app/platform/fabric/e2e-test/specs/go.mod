@@ -14,7 +14,7 @@ require (
 )
 
 require (
-	cloud.google.com/go v0.110.4 // indirect
+	cloud.google.com/go v0.110.6 // indirect
 	github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
 	github.com/Azure/go-autorest/autorest v0.11.29 // indirect
 	github.com/Azure/go-autorest/autorest/adal v0.9.23 // indirect
@@ -61,7 +61,7 @@ require (
 	github.com/elazarl/goproxy v0.0.0-20180725130230-947c36da3153 // indirect
 	github.com/emicklei/go-restful v2.16.0+incompatible // indirect
 	github.com/evanphx/json-patch v4.12.0+incompatible // indirect
-	github.com/fsnotify/fsnotify v1.6.0 // indirect
+	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/fsouza/go-dockerclient v1.6.3 // indirect
 	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/go-delve/delve v1.4.0 // indirect
@@ -174,7 +174,7 @@ require (
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	google.golang.org/api v0.126.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/genproto v0.0.0-20230711160842-782d3b101e98 // indirect
+	google.golang.org/genproto v0.0.0-20230803162519-f966b187b2e5 // indirect
 	google.golang.org/grpc v1.58.3 // indirect
 	google.golang.org/protobuf v1.36.1 // indirect
 	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
@@ -190,11 +190,11 @@ require (
 	k8s.io/api v0.22.5 // indirect
 	k8s.io/apimachinery v0.22.5 // indirect
 	k8s.io/client-go v0.22.5 // indirect
-	k8s.io/gengo v0.0.0-20220902162205-c0856e24416d // indirect
+	k8s.io/gengo v0.0.0-20230829151522-9cce18d56c01 // indirect
 	k8s.io/klog v1.0.0 // indirect
-	k8s.io/kube-openapi v0.0.0-20230717233707-2695361300d9 // indirect
-	k8s.io/kubernetes v1.28.12 // indirect
-	k8s.io/utils v0.0.0-20230406110748-d93618cff8a2 // indirect
+	k8s.io/kube-openapi v0.0.0-20231010175941-2dd684a91f00 // indirect
+	k8s.io/kubernetes v1.29.14 // indirect
+	k8s.io/utils v0.0.0-20230726121419-3b25d923346b // indirect
 	rsc.io/pdf v0.1.1 // indirect
 	sigs.k8s.io/structured-merge-diff v0.0.0-20190525122527-15d366b2352e // indirect
 	sigs.k8s.io/yaml v1.3.0 // indirect
