@@ -2,7 +2,7 @@
 
 python-markdown-math==0.8
 
-alabaster==0.7.16
+alabaster==1.0.0
 Babel==2.16.0
 docutils==0.21.2
 imagesize==0.7.1
